@@ -1,8 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import apiKey from './config.js/apiKey';
 
 function App() {
+  console.log(apiKey);
   return (
     <div className="App">
       <header className="App-header">
