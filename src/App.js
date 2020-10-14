@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Player from 'react-youtube';
 import Videos from './Videos';
 import './App.css';
 import { apiKey } from './config/apiKey.js';
@@ -8,7 +7,6 @@ import ModalBackGround from './ModalBackGround';
 function App() {
   const [playlistVideos, setPaylistVideos] = useState({});
   const [currentVideo, setCurrentVideo] = useState('');
-  const [player, setPlayer] = useState({});
   const [showModal, setModal] = useState(false);
 
   const closeModal = () => {

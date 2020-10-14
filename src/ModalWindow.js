@@ -15,7 +15,7 @@ export default function ModalWindow(props) {
   };
 
   return (
-    <div class="modal">
+    <div className="modal">
       <Player
         videoId={props.videoId}
         opts={opts}
