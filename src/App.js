@@ -17,19 +17,10 @@ function App() {
 
   // this function below will give me access to the player wihtin state which I can use to play the video
 
-  const addPlayerToState = (e) => {
-    setPlayer(e.target);
-    console.log(player);
-  };
-
   const playVideo = (index) => {
     let videoId = playlistVideos[index].contentDetails.videoId;
     setCurrentVideo(videoId);
     setModal(true);
-    console.log(player);
-    setTimeout(() => {
-      console.log(player);
-    }, 10000);
   };
 
   // Here I am making the call to my youtube playlist to get the information //
@@ -52,11 +43,7 @@ function App() {
   return (
     <div>
       {showModal && (
-        <ModalBackGround
-          videoId={currentVideo}
-          onReady={addPlayerToState}
-          closeModal={closeModal}
-        />
+        <ModalBackGround videoId={currentVideo} closeModal={closeModal} />
       )}
       <div className="App">
         <div className="flex-container">
