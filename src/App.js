@@ -3,31 +3,33 @@ import Player from 'react-youtube';
 import Videos from './Videos';
 import './App.css';
 import { apiKey } from './config/apiKey.js';
+import ModalBackGround from './ModalBackGround';
 
 function App() {
   const [playlistVideos, setPaylistVideos] = useState({});
-  const [currentVideo, setCurrentVideo] = useState('S8yn3-WpVV8');
+  const [currentVideo, setCurrentVideo] = useState('');
   const [player, setPlayer] = useState({});
-  // These are the options for the youtube player
-  const opts = {
-    height: '90%',
-    width: '90%',
-    playerVars: {
-      // https://developers.google.com/youtube/player_parameters
-      autoplay: 1,
-    },
+  const [showModal, setModal] = useState(false);
+
+  const closeModal = () => {
+    setModal(false);
   };
 
   // this function below will give me access to the player wihtin state which I can use to play the video
 
   const addPlayerToState = (e) => {
     setPlayer(e.target);
+    console.log(player);
   };
 
-  const playVideo = async (index) => {
+  const playVideo = (index) => {
     let videoId = playlistVideos[index].contentDetails.videoId;
-    await setCurrentVideo(videoId);
-    player.playVideo();
+    setCurrentVideo(videoId);
+    setModal(true);
+    console.log(player);
+    setTimeout(() => {
+      console.log(player);
+    }, 10000);
   };
 
   // Here I am making the call to my youtube playlist to get the information //
@@ -48,16 +50,18 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="flex-container">
-        <Player
-          className="myMoviePlayer"
+    <div>
+      {showModal && (
+        <ModalBackGround
           videoId={currentVideo}
-          opts={opts}
           onReady={addPlayerToState}
+          closeModal={closeModal}
         />
-
-        <Videos videoData={playlistVideos} play={playVideo} />
+      )}
+      <div className="App">
+        <div className="flex-container">
+          <Videos videoData={playlistVideos} play={playVideo} />
+        </div>
       </div>
     </div>
   );
