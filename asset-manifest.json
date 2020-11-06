@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/React-hooks-youtube-gallery/static/css/main.4ef92857.chunk.css",
+    "main.js": "/React-hooks-youtube-gallery/static/js/main.0dfe794d.chunk.js",
+    "main.js.map": "/React-hooks-youtube-gallery/static/js/main.0dfe794d.chunk.js.map",
+    "runtime-main.js": "/React-hooks-youtube-gallery/static/js/runtime-main.673f96ed.js",
+    "runtime-main.js.map": "/React-hooks-youtube-gallery/static/js/runtime-main.673f96ed.js.map",
+    "static/js/2.89eaff58.chunk.js": "/React-hooks-youtube-gallery/static/js/2.89eaff58.chunk.js",
+    "static/js/2.89eaff58.chunk.js.map": "/React-hooks-youtube-gallery/static/js/2.89eaff58.chunk.js.map",
+    "index.html": "/React-hooks-youtube-gallery/index.html",
+    "precache-manifest.34210baeb161ef87041aaeb188a722b3.js": "/React-hooks-youtube-gallery/precache-manifest.34210baeb161ef87041aaeb188a722b3.js",
+    "service-worker.js": "/React-hooks-youtube-gallery/service-worker.js",
+    "static/css/main.4ef92857.chunk.css.map": "/React-hooks-youtube-gallery/static/css/main.4ef92857.chunk.css.map",
+    "static/js/2.89eaff58.chunk.js.LICENSE.txt": "/React-hooks-youtube-gallery/static/js/2.89eaff58.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.673f96ed.js",
+    "static/js/2.89eaff58.chunk.js",
+    "static/css/main.4ef92857.chunk.css",
+    "static/js/main.0dfe794d.chunk.js"
+  ]
+}
